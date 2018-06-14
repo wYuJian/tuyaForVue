@@ -21,6 +21,9 @@
                 <div class="lsls-wrapper">
                     <Wrapper v-for='item in 3' :WrapperData='WrapperSrc[item-1]'></Wrapper>
                 </div>
+                <div class="wrapper">
+                    <hello-title></hello-title>
+                </div>
             </el-col>
         </el-row>
         <el-row style="background:#fff;border-top: 1px #eee solid;margin-top: 40px; border-bottom: 1px #eee solid;">
@@ -35,6 +38,7 @@
 import Header from '@/components/header/header'
 import Footer from '@/components/footer/footer'
 import Wrapper from '@/components/home/wrapper/wrapper'
+import HelloTitle from '@/components/home/helloTitle/helloTitle'
 import Vue from 'vue'
 import { Row, Col } from 'element-ui'
 Vue.use(Row)
@@ -73,7 +77,8 @@ export default {
     components: {
         Header,
         Footer,
-        Wrapper
+        Wrapper,
+        HelloTitle
     },
     mounted() {},
     methods: {}

@@ -23,6 +23,9 @@
                 </div>
                 <div class="wrapper">
                     <hello-title></hello-title>
+                    <div class="works-list">
+                        <TheHomeWorksList v-for="item in 10" :style="item%5 !==0 ?'margin:0 58px 18px 0':'margin:0 0 18px 0'"></TheHomeWorksList>
+                    </div>
                 </div>
             </el-col>
         </el-row>
@@ -39,6 +42,7 @@ import Header from '@/components/header/header'
 import Footer from '@/components/footer/footer'
 import Wrapper from '@/components/home/wrapper/wrapper'
 import HelloTitle from '@/components/home/helloTitle/helloTitle'
+import TheHomeWorksList from '@/components/home/TheHomeWorksList/TheHomeWorksList'
 import Vue from 'vue'
 import { Row, Col } from 'element-ui'
 Vue.use(Row)
@@ -78,7 +82,8 @@ export default {
         Header,
         Footer,
         Wrapper,
-        HelloTitle
+        HelloTitle,
+        TheHomeWorksList
     },
     mounted() {},
     methods: {}
@@ -98,5 +103,12 @@ export default {
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
+}
+.works-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }
 </style>
